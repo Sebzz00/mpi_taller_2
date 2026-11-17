@@ -1,0 +1,39 @@
+=== MPI version 2: size-balanced distribution (LPT) ===
+Processes: 8
+
+Rank  Files       MB     Tokens  Local time (s)
+   0    376    34.38    5620776          1.0805
+   1    375    34.38    5619883          1.1431
+   2    374    34.38    5617952          1.0562
+   3    375    34.38    5618775          1.0862
+   4    375    34.38    5618125          1.0476
+   5    375    34.38    5618432          1.1635
+   6    375    34.38    5618773          1.1135
+   7    375    34.38    5618742          1.0251
+
+Mean local time: 1.0895 s
+Max local time: 1.1635 s
+Load imbalance LI = max/mean: 1.0680
+Relative spread (max-min)/mean: 0.1271
+
+Files processed: 3000
+Total tokens read: 44951458
+Total occurrences found: 3631778
+
+Top 10 query words in the corpus:
+  a: 785774
+  para: 392156
+  sus: 228913
+  otros: 105530
+  ante: 99832
+  unos: 88794
+  otra: 83901
+  vosotros: 61617
+  mios: 58420
+  tuya: 56635
+
+Baseline check: MATCH
+
+LOCAL_TIMES=1.080538,1.143086,1.056207,1.086189,1.047581,1.163539,1.113537,1.025075
+LI=1.067987
+EXECUTION_TIME=1.401336

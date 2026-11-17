@@ -1,0 +1,793 @@
+Removing existing results directory: /app/results
+======================================
+1) Generating dataset
+======================================
+Vocabulario existente encontrado con 2000 palabras únicas.
+Eliminando directorio existente: /app/dataset
+Directorio de salida listo: /app/dataset
+Creado consulta.txt con 200 palabras
+Generados 50/3000 archivos...
+Generados 100/3000 archivos...
+Generados 150/3000 archivos...
+Generados 200/3000 archivos...
+Generados 250/3000 archivos...
+Generados 300/3000 archivos...
+Generados 350/3000 archivos...
+Generados 400/3000 archivos...
+Generados 450/3000 archivos...
+Generados 500/3000 archivos...
+Generados 550/3000 archivos...
+Generados 600/3000 archivos...
+Generados 650/3000 archivos...
+Generados 700/3000 archivos...
+Generados 750/3000 archivos...
+Generados 800/3000 archivos...
+Generados 850/3000 archivos...
+Generados 900/3000 archivos...
+Generados 950/3000 archivos...
+Generados 1000/3000 archivos...
+Generados 1050/3000 archivos...
+Generados 1100/3000 archivos...
+Generados 1150/3000 archivos...
+Generados 1200/3000 archivos...
+Generados 1250/3000 archivos...
+Generados 1300/3000 archivos...
+Generados 1350/3000 archivos...
+Generados 1400/3000 archivos...
+Generados 1450/3000 archivos...
+Generados 1500/3000 archivos...
+Generados 1550/3000 archivos...
+Generados 1600/3000 archivos...
+Generados 1650/3000 archivos...
+Generados 1700/3000 archivos...
+Generados 1750/3000 archivos...
+Generados 1800/3000 archivos...
+Generados 1850/3000 archivos...
+Generados 1900/3000 archivos...
+Generados 1950/3000 archivos...
+Generados 2000/3000 archivos...
+Generados 2050/3000 archivos...
+Generados 2100/3000 archivos...
+Generados 2150/3000 archivos...
+Generados 2200/3000 archivos...
+Generados 2250/3000 archivos...
+Generados 2300/3000 archivos...
+Generados 2350/3000 archivos...
+Generados 2400/3000 archivos...
+Generados 2450/3000 archivos...
+Generados 2500/3000 archivos...
+Generados 2550/3000 archivos...
+Generados 2600/3000 archivos...
+Generados 2650/3000 archivos...
+Generados 2700/3000 archivos...
+Generados 2750/3000 archivos...
+Generados 2800/3000 archivos...
+Generados 2850/3000 archivos...
+Generados 2900/3000 archivos...
+Generados 2950/3000 archivos...
+Generados 3000/3000 archivos...
+
+Resumen:
+- Carpeta de salida: /app/dataset
+- Archivo de vocabulario: /app/spanish_words.info
+- Archivos generados: 3000
+- Total aproximado de palabras: 44951458
+- Vocabulario único disponible: 2000
+- Tamaño de consulta solicitado: 200
+- Modo ponderado: True
+
+======================================
+2) Running sequential baseline
+======================================
+Tiempo de ejecución: 4.369735 segundos
+
+Dataset procesado: /app/dataset
+Archivo de consulta: consulta.txt
+Archivos procesados: 3000
+Total de tokens leídos: 44951458
+Total de ocurrencias encontradas: 3631778
+Resultados guardados en: /app/dataset/baseline_results.csv
+
+Top 10 palabras de consulta en el corpus:
+  a: 785774
+  para: 392156
+  sus: 228913
+  otros: 105530
+  ante: 99832
+  unos: 88794
+  otra: 83901
+  vosotros: 61617
+  mios: 58420
+  tuya: 56635
+
+======================================
+3) Running MPI version 1
+======================================
+
+Running mpi1.py with np=2, run=1
+=== MPI version 1: static block distribution ===
+Processes: 2 (counting ranks listed: 2)
+
+Rank  Files       MB     Tokens  Local time (s)
+   0   1500   140.48   22960683          2.4309
+   1   1500   134.57   21990775          2.2922
+
+Mean local time: 2.3615 s
+Max local time: 2.4309 s
+Load imbalance LI = max/mean: 1.0294
+Relative spread (max-min)/mean: 0.0587
+
+Files processed: 3000
+Total tokens read: 44951458
+Total occurrences found: 3631778
+
+Top 10 query words in the corpus:
+  a: 785774
+  para: 392156
+  sus: 228913
+  otros: 105530
+  ante: 99832
+  unos: 88794
+  otra: 83901
+  vosotros: 61617
+  mios: 58420
+  tuya: 56635
+
+Baseline check: MATCH
+
+LOCAL_TIMES=2.430870,2.292223
+LI=1.029355
+EXECUTION_TIME=2.440746
+
+Running mpi1.py with np=2, run=2
+=== MPI version 1: static block distribution ===
+Processes: 2 (counting ranks listed: 2)
+
+Rank  Files       MB     Tokens  Local time (s)
+   0   1500   140.48   22960683          2.4243
+   1   1500   134.57   21990775          2.3613
+
+Mean local time: 2.3928 s
+Max local time: 2.4243 s
+Load imbalance LI = max/mean: 1.0132
+Relative spread (max-min)/mean: 0.0263
+
+Files processed: 3000
+Total tokens read: 44951458
+Total occurrences found: 3631778
+
+Top 10 query words in the corpus:
+  a: 785774
+  para: 392156
+  sus: 228913
+  otros: 105530
+  ante: 99832
+  unos: 88794
+  otra: 83901
+  vosotros: 61617
+  mios: 58420
+  tuya: 56635
+
+Baseline check: MATCH
+
+LOCAL_TIMES=2.424345,2.361317
+LI=1.013170
+EXECUTION_TIME=2.434757
+
+Running mpi1.py with np=2, run=3
+=== MPI version 1: static block distribution ===
+Processes: 2 (counting ranks listed: 2)
+
+Rank  Files       MB     Tokens  Local time (s)
+   0   1500   140.48   22960683          2.5228
+   1   1500   134.57   21990775          2.4061
+
+Mean local time: 2.4645 s
+Max local time: 2.5228 s
+Load imbalance LI = max/mean: 1.0237
+Relative spread (max-min)/mean: 0.0474
+
+Files processed: 3000
+Total tokens read: 44951458
+Total occurrences found: 3631778
+
+Top 10 query words in the corpus:
+  a: 785774
+  para: 392156
+  sus: 228913
+  otros: 105530
+  ante: 99832
+  unos: 88794
+  otra: 83901
+  vosotros: 61617
+  mios: 58420
+  tuya: 56635
+
+Baseline check: MATCH
+
+LOCAL_TIMES=2.522836,2.406107
+LI=1.023683
+EXECUTION_TIME=2.534219
+
+Running mpi1.py with np=4, run=1
+=== MPI version 1: static block distribution ===
+Processes: 4 (counting ranks listed: 4)
+
+Rank  Files       MB     Tokens  Local time (s)
+   0    750    66.10   10803859          2.0205
+   1    750    74.39   12156824          2.1565
+   2    750    66.19   10816979          1.9505
+   3    750    68.38   11173796          2.0365
+
+Mean local time: 2.0410 s
+Max local time: 2.1565 s
+Load imbalance LI = max/mean: 1.0566
+Relative spread (max-min)/mean: 0.1009
+
+Files processed: 3000
+Total tokens read: 44951458
+Total occurrences found: 3631778
+
+Top 10 query words in the corpus:
+  a: 785774
+  para: 392156
+  sus: 228913
+  otros: 105530
+  ante: 99832
+  unos: 88794
+  otra: 83901
+  vosotros: 61617
+  mios: 58420
+  tuya: 56635
+
+Baseline check: MATCH
+
+LOCAL_TIMES=2.020542,2.156503,1.950470,2.036496
+LI=1.056590
+EXECUTION_TIME=2.184253
+
+Running mpi1.py with np=4, run=2
+=== MPI version 1: static block distribution ===
+Processes: 4 (counting ranks listed: 4)
+
+Rank  Files       MB     Tokens  Local time (s)
+   0    750    66.10   10803859          1.9160
+   1    750    74.39   12156824          2.0065
+   2    750    66.19   10816979          1.8777
+   3    750    68.38   11173796          1.9555
+
+Mean local time: 1.9389 s
+Max local time: 2.0065 s
+Load imbalance LI = max/mean: 1.0348
+Relative spread (max-min)/mean: 0.0664
+
+Files processed: 3000
+Total tokens read: 44951458
+Total occurrences found: 3631778
+
+Top 10 query words in the corpus:
+  a: 785774
+  para: 392156
+  sus: 228913
+  otros: 105530
+  ante: 99832
+  unos: 88794
+  otra: 83901
+  vosotros: 61617
+  mios: 58420
+  tuya: 56635
+
+Baseline check: MATCH
+
+LOCAL_TIMES=1.916020,2.006454,1.877720,1.955456
+LI=1.034835
+EXECUTION_TIME=2.017489
+
+Running mpi1.py with np=4, run=3
+=== MPI version 1: static block distribution ===
+Processes: 4 (counting ranks listed: 4)
+
+Rank  Files       MB     Tokens  Local time (s)
+   0    750    66.10   10803859          1.8705
+   1    750    74.39   12156824          2.0418
+   2    750    66.19   10816979          1.8926
+   3    750    68.38   11173796          1.9400
+
+Mean local time: 1.9362 s
+Max local time: 2.0418 s
+Load imbalance LI = max/mean: 1.0545
+Relative spread (max-min)/mean: 0.0885
+
+Files processed: 3000
+Total tokens read: 44951458
+Total occurrences found: 3631778
+
+Top 10 query words in the corpus:
+  a: 785774
+  para: 392156
+  sus: 228913
+  otros: 105530
+  ante: 99832
+  unos: 88794
+  otra: 83901
+  vosotros: 61617
+  mios: 58420
+  tuya: 56635
+
+Baseline check: MATCH
+
+LOCAL_TIMES=1.870536,2.041832,1.892627,1.939977
+LI=1.054533
+EXECUTION_TIME=2.056109
+
+Running mpi1.py with np=8, run=1
+=== MPI version 1: static block distribution ===
+Processes: 8 (counting ranks listed: 8)
+
+Rank  Files       MB     Tokens  Local time (s)
+   0    375    36.73    6002531          1.3907
+   1    375    29.37    4801328          1.0936
+   2    375    37.82    6180576          1.3869
+   3    375    36.57    5976248          1.4238
+   4    375    32.32    5281651          1.2526
+   5    375    33.86    5535328          1.2595
+   6    375    33.10    5409609          1.2500
+   7    375    35.28    5764187          1.3295
+
+Mean local time: 1.2983 s
+Max local time: 1.4238 s
+Load imbalance LI = max/mean: 1.0966
+Relative spread (max-min)/mean: 0.2543
+
+Files processed: 3000
+Total tokens read: 44951458
+Total occurrences found: 3631778
+
+Top 10 query words in the corpus:
+  a: 785774
+  para: 392156
+  sus: 228913
+  otros: 105530
+  ante: 99832
+  unos: 88794
+  otra: 83901
+  vosotros: 61617
+  mios: 58420
+  tuya: 56635
+
+Baseline check: MATCH
+
+LOCAL_TIMES=1.390665,1.093593,1.386935,1.423790,1.252594,1.259452,1.249956,1.329485
+LI=1.096650
+EXECUTION_TIME=1.442090
+
+Running mpi1.py with np=8, run=2
+=== MPI version 1: static block distribution ===
+Processes: 8 (counting ranks listed: 8)
+
+Rank  Files       MB     Tokens  Local time (s)
+   0    375    36.73    6002531          1.7130
+   1    375    29.37    4801328          1.3183
+   2    375    37.82    6180576          1.6880
+   3    375    36.57    5976248          1.5412
+   4    375    32.32    5281651          1.4287
+   5    375    33.86    5535328          1.5145
+   6    375    33.10    5409609          1.3769
+   7    375    35.28    5764187          1.4768
+
+Mean local time: 1.5072 s
+Max local time: 1.7130 s
+Load imbalance LI = max/mean: 1.1366
+Relative spread (max-min)/mean: 0.2619
+
+Files processed: 3000
+Total tokens read: 44951458
+Total occurrences found: 3631778
+
+Top 10 query words in the corpus:
+  a: 785774
+  para: 392156
+  sus: 228913
+  otros: 105530
+  ante: 99832
+  unos: 88794
+  otra: 83901
+  vosotros: 61617
+  mios: 58420
+  tuya: 56635
+
+Baseline check: MATCH
+
+LOCAL_TIMES=1.713043,1.318300,1.687957,1.541184,1.428727,1.514459,1.376927,1.476797
+LI=1.136592
+EXECUTION_TIME=1.738652
+
+Running mpi1.py with np=8, run=3
+=== MPI version 1: static block distribution ===
+Processes: 8 (counting ranks listed: 8)
+
+Rank  Files       MB     Tokens  Local time (s)
+   0    375    36.73    6002531          1.4378
+   1    375    29.37    4801328          1.1518
+   2    375    37.82    6180576          1.5348
+   3    375    36.57    5976248          1.4587
+   4    375    32.32    5281651          1.2909
+   5    375    33.86    5535328          1.2871
+   6    375    33.10    5409609          1.2998
+   7    375    35.28    5764187          1.3847
+
+Mean local time: 1.3557 s
+Max local time: 1.5348 s
+Load imbalance LI = max/mean: 1.1321
+Relative spread (max-min)/mean: 0.2825
+
+Files processed: 3000
+Total tokens read: 44951458
+Total occurrences found: 3631778
+
+Top 10 query words in the corpus:
+  a: 785774
+  para: 392156
+  sus: 228913
+  otros: 105530
+  ante: 99832
+  unos: 88794
+  otra: 83901
+  vosotros: 61617
+  mios: 58420
+  tuya: 56635
+
+Baseline check: MATCH
+
+LOCAL_TIMES=1.437781,1.151787,1.534827,1.458729,1.290927,1.287098,1.299769,1.384660
+LI=1.132131
+EXECUTION_TIME=1.589035
+
+======================================
+4) Running MPI version 2
+======================================
+
+Running mpi2.py with np=2, run=1
+=== MPI version 2: dynamic distribution, largest files first ===
+Processes: 2 (counting ranks listed: 2)
+
+Rank  Files       MB     Tokens  Local time (s)
+   0   2705   133.79   21864184          2.4709
+   1    295   141.27   23087274          2.4673
+
+Mean local time: 2.4691 s
+Max local time: 2.4709 s
+Load imbalance LI = max/mean: 1.0007
+Relative spread (max-min)/mean: 0.0014
+
+Files processed: 3000
+Total tokens read: 44951458
+Total occurrences found: 3631778
+
+Top 10 query words in the corpus:
+  a: 785774
+  para: 392156
+  sus: 228913
+  otros: 105530
+  ante: 99832
+  unos: 88794
+  otra: 83901
+  vosotros: 61617
+  mios: 58420
+  tuya: 56635
+
+Baseline check: MATCH
+
+LOCAL_TIMES=2.470879,2.467335
+LI=1.000718
+EXECUTION_TIME=2.532848
+
+Running mpi2.py with np=2, run=2
+=== MPI version 2: dynamic distribution, largest files first ===
+Processes: 2 (counting ranks listed: 2)
+
+Rank  Files       MB     Tokens  Local time (s)
+   0   2705   133.79   21864184          2.4965
+   1    295   141.27   23087274          2.4845
+
+Mean local time: 2.4905 s
+Max local time: 2.4965 s
+Load imbalance LI = max/mean: 1.0024
+Relative spread (max-min)/mean: 0.0048
+
+Files processed: 3000
+Total tokens read: 44951458
+Total occurrences found: 3631778
+
+Top 10 query words in the corpus:
+  a: 785774
+  para: 392156
+  sus: 228913
+  otros: 105530
+  ante: 99832
+  unos: 88794
+  otra: 83901
+  vosotros: 61617
+  mios: 58420
+  tuya: 56635
+
+Baseline check: MATCH
+
+LOCAL_TIMES=2.496450,2.484540
+LI=1.002391
+EXECUTION_TIME=2.556111
+
+Running mpi2.py with np=2, run=3
+=== MPI version 2: dynamic distribution, largest files first ===
+Processes: 2 (counting ranks listed: 2)
+
+Rank  Files       MB     Tokens  Local time (s)
+   0   2700   132.05   21580190          2.6305
+   1    300   143.00   23371268          2.6109
+
+Mean local time: 2.6207 s
+Max local time: 2.6305 s
+Load imbalance LI = max/mean: 1.0037
+Relative spread (max-min)/mean: 0.0075
+
+Files processed: 3000
+Total tokens read: 44951458
+Total occurrences found: 3631778
+
+Top 10 query words in the corpus:
+  a: 785774
+  para: 392156
+  sus: 228913
+  otros: 105530
+  ante: 99832
+  unos: 88794
+  otra: 83901
+  vosotros: 61617
+  mios: 58420
+  tuya: 56635
+
+Baseline check: MATCH
+
+LOCAL_TIMES=2.630480,2.610896
+LI=1.003736
+EXECUTION_TIME=2.691023
+
+Running mpi2.py with np=4, run=1
+=== MPI version 2: dynamic distribution, largest files first ===
+Processes: 4 (counting ranks listed: 4)
+
+Rank  Files       MB     Tokens  Local time (s)
+   0   2055    58.60    9576183          2.4188
+   1    320    72.45   11843346          2.2844
+   2    315    73.64   12031383          2.3040
+   3    310    70.36   11500546          2.2932
+
+Mean local time: 2.3251 s
+Max local time: 2.4188 s
+Load imbalance LI = max/mean: 1.0403
+Relative spread (max-min)/mean: 0.0578
+
+Files processed: 3000
+Total tokens read: 44951458
+Total occurrences found: 3631778
+
+Top 10 query words in the corpus:
+  a: 785774
+  para: 392156
+  sus: 228913
+  otros: 105530
+  ante: 99832
+  unos: 88794
+  otra: 83901
+  vosotros: 61617
+  mios: 58420
+  tuya: 56635
+
+Baseline check: MATCH
+
+LOCAL_TIMES=2.418758,2.284410,2.304014,2.293150
+LI=1.040289
+EXECUTION_TIME=2.467653
+
+Running mpi2.py with np=4, run=2
+=== MPI version 2: dynamic distribution, largest files first ===
+Processes: 4 (counting ranks listed: 4)
+
+Rank  Files       MB     Tokens  Local time (s)
+   0   2055    58.60    9576183          2.2738
+   1    315    73.10   11947576          2.1811
+   2    320    72.55   11857433          2.1658
+   3    310    70.80   11570266          2.1726
+
+Mean local time: 2.1983 s
+Max local time: 2.2738 s
+Load imbalance LI = max/mean: 1.0343
+Relative spread (max-min)/mean: 0.0491
+
+Files processed: 3000
+Total tokens read: 44951458
+Total occurrences found: 3631778
+
+Top 10 query words in the corpus:
+  a: 785774
+  para: 392156
+  sus: 228913
+  otros: 105530
+  ante: 99832
+  unos: 88794
+  otra: 83901
+  vosotros: 61617
+  mios: 58420
+  tuya: 56635
+
+Baseline check: MATCH
+
+LOCAL_TIMES=2.273805,2.181089,2.165799,2.172588
+LI=1.034337
+EXECUTION_TIME=2.324922
+
+Running mpi2.py with np=4, run=3
+=== MPI version 2: dynamic distribution, largest files first ===
+Processes: 4 (counting ranks listed: 4)
+
+Rank  Files       MB     Tokens  Local time (s)
+   0   2065    59.41    9707571          2.3491
+   1    305    70.21   11474536          2.2357
+   2    315    73.30   11981222          2.2799
+   3    315    72.14   11788129          2.2335
+
+Mean local time: 2.2746 s
+Max local time: 2.3491 s
+Load imbalance LI = max/mean: 1.0328
+Relative spread (max-min)/mean: 0.0508
+
+Files processed: 3000
+Total tokens read: 44951458
+Total occurrences found: 3631778
+
+Top 10 query words in the corpus:
+  a: 785774
+  para: 392156
+  sus: 228913
+  otros: 105530
+  ante: 99832
+  unos: 88794
+  otra: 83901
+  vosotros: 61617
+  mios: 58420
+  tuya: 56635
+
+Baseline check: MATCH
+
+LOCAL_TIMES=2.349133,2.235675,2.279936,2.233498
+LI=1.032785
+EXECUTION_TIME=2.402918
+
+Running mpi2.py with np=8, run=1
+=== MPI version 2: dynamic distribution, largest files first ===
+Processes: 8 (counting ranks listed: 8)
+
+Rank  Files       MB     Tokens  Local time (s)
+   0   1215    22.45    3670285          1.5030
+   1    240    34.19    5588894          1.4528
+   2    245    35.55    5809329          1.4642
+   3    265    37.55    6139046          1.4651
+   4    265    36.35    5940686          1.4543
+   5    250    36.34    5940839          1.4663
+   6    255    34.87    5698154          1.4666
+   7    265    37.74    6164225          1.4716
+
+Mean local time: 1.4680 s
+Max local time: 1.5030 s
+Load imbalance LI = max/mean: 1.0238
+Relative spread (max-min)/mean: 0.0342
+
+Files processed: 3000
+Total tokens read: 44951458
+Total occurrences found: 3631778
+
+Top 10 query words in the corpus:
+  a: 785774
+  para: 392156
+  sus: 228913
+  otros: 105530
+  ante: 99832
+  unos: 88794
+  otra: 83901
+  vosotros: 61617
+  mios: 58420
+  tuya: 56635
+
+Baseline check: MATCH
+
+LOCAL_TIMES=1.502955,1.452818,1.464204,1.465086,1.454350,1.466281,1.466627,1.471551
+LI=1.023822
+EXECUTION_TIME=1.570200
+
+Running mpi2.py with np=8, run=2
+=== MPI version 2: dynamic distribution, largest files first ===
+Processes: 8 (counting ranks listed: 8)
+
+Rank  Files       MB     Tokens  Local time (s)
+   0   1230    22.82    3731402          1.5641
+   1    255    36.41    5950042          1.5074
+   2    270    37.41    6110592          1.5461
+   3    250    36.47    5961508          1.5393
+   4    250    36.58    5978792          1.5304
+   5    250    34.74    5677490          1.5283
+   6    240    33.74    5514554          1.5244
+   7    255    36.88    6027078          1.5231
+
+Mean local time: 1.5329 s
+Max local time: 1.5641 s
+Load imbalance LI = max/mean: 1.0203
+Relative spread (max-min)/mean: 0.0370
+
+Files processed: 3000
+Total tokens read: 44951458
+Total occurrences found: 3631778
+
+Top 10 query words in the corpus:
+  a: 785774
+  para: 392156
+  sus: 228913
+  otros: 105530
+  ante: 99832
+  unos: 88794
+  otra: 83901
+  vosotros: 61617
+  mios: 58420
+  tuya: 56635
+
+Baseline check: MATCH
+
+LOCAL_TIMES=1.564064,1.507411,1.546092,1.539314,1.530401,1.528290,1.524424,1.523114
+LI=1.020337
+EXECUTION_TIME=1.628192
+
+Running mpi2.py with np=8, run=3
+=== MPI version 2: dynamic distribution, largest files first ===
+Processes: 8 (counting ranks listed: 8)
+
+Rank  Files       MB     Tokens  Local time (s)
+   0   1240    23.07    3772263          1.5064
+   1    245    36.54    5972078          1.4695
+   2    255    35.42    5787273          1.4802
+   3    255    36.99    6047872          1.4682
+   4    250    36.45    5955577          1.4822
+   5    250    36.58    5977908          1.4792
+   6    250    34.52    5639203          1.4690
+   7    255    35.48    5799284          1.4614
+
+Mean local time: 1.4770 s
+Max local time: 1.5064 s
+Load imbalance LI = max/mean: 1.0199
+Relative spread (max-min)/mean: 0.0304
+
+Files processed: 3000
+Total tokens read: 44951458
+Total occurrences found: 3631778
+
+Top 10 query words in the corpus:
+  a: 785774
+  para: 392156
+  sus: 228913
+  otros: 105530
+  ante: 99832
+  unos: 88794
+  otra: 83901
+  vosotros: 61617
+  mios: 58420
+  tuya: 56635
+
+Baseline check: MATCH
+
+LOCAL_TIMES=1.506402,1.469459,1.480202,1.468244,1.482235,1.479239,1.469005,1.461431
+LI=1.019888
+EXECUTION_TIME=1.561869
+
+======================================
+Done
+======================================
+Logs available in: /app/results/logs
+Summary CSV: /app/results/times_summary.csv

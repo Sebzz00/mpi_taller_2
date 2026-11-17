@@ -1,0 +1,39 @@
+=== MPI version 1: static block distribution ===
+Processes: 8 (counting ranks listed: 8)
+
+Rank  Files       MB     Tokens  Local time (s)
+   0    375    36.73    6002531          1.2194
+   1    375    29.37    4801328          0.9877
+   2    375    37.82    6180576          1.3001
+   3    375    36.57    5976248          1.2571
+   4    375    32.32    5281651          1.0595
+   5    375    33.86    5535328          1.0976
+   6    375    33.10    5409609          1.1474
+   7    375    35.28    5764187          1.2808
+
+Mean local time: 1.1687 s
+Max local time: 1.3001 s
+Load imbalance LI = max/mean: 1.1124
+Relative spread (max-min)/mean: 0.2672
+
+Files processed: 3000
+Total tokens read: 44951458
+Total occurrences found: 3631778
+
+Top 10 query words in the corpus:
+  a: 785774
+  para: 392156
+  sus: 228913
+  otros: 105530
+  ante: 99832
+  unos: 88794
+  otra: 83901
+  vosotros: 61617
+  mios: 58420
+  tuya: 56635
+
+Baseline check: MATCH
+
+LOCAL_TIMES=1.219364,0.987729,1.300060,1.257065,1.059500,1.097595,1.147432,1.280781
+LI=1.112407
+EXECUTION_TIME=1.531894

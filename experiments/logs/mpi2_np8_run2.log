@@ -1,0 +1,39 @@
+=== MPI version 2: dynamic distribution, largest files first ===
+Processes: 8 (counting ranks listed: 8)
+
+Rank  Files       MB     Tokens  Local time (s)
+   0   1110    19.90    3254787          1.2492
+   1    255    36.34    5939465          1.1922
+   2    270    37.30    6097262          1.1815
+   3    275    36.81    6016941          1.2084
+   4    265    36.11    5900291          1.2033
+   5    280    34.31    5608806          1.2105
+   6    270    38.07    6218459          1.1835
+   7    275    36.20    5915447          1.1924
+
+Mean local time: 1.2026 s
+Max local time: 1.2492 s
+Load imbalance LI = max/mean: 1.0387
+Relative spread (max-min)/mean: 0.0563
+
+Files processed: 3000
+Total tokens read: 44951458
+Total occurrences found: 3631778
+
+Top 10 query words in the corpus:
+  a: 785774
+  para: 392156
+  sus: 228913
+  otros: 105530
+  ante: 99832
+  unos: 88794
+  otra: 83901
+  vosotros: 61617
+  mios: 58420
+  tuya: 56635
+
+Baseline check: MATCH
+
+LOCAL_TIMES=1.249223,1.192160,1.181502,1.208428,1.203260,1.210466,1.183540,1.192440
+LI=1.038745
+EXECUTION_TIME=1.526705
